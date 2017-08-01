@@ -15,6 +15,7 @@ import org.jsoup.nodes.Document;
  */
 public class App {
 	public static void main(String[] args) throws IOException {
+		System.out.println("Reading content from Web......");
 		Document doc = Jsoup.connect("http://dantri.com.vn").get();
 		// String title = doc.title();
 		// //System.out.println("Title : " + title);
@@ -27,6 +28,6 @@ public class App {
 		BufferedWriter out = new BufferedWriter(new FileWriter(time));
 		out.write(doc.toString());
 		out.close();
-
+		System.out.println("Done!!");
 	}
 }
